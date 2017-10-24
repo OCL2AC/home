@@ -17,12 +17,17 @@
 
       <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+
+
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -52,27 +57,69 @@
                        <strong> OCL2AC Tool</strong>
                     </a>
                 </li>
+                <br>
+                <br>
+                <br>
+                <br>
+                <li>
+                    <a href="#description"><b>OCL2AC (OCL2NGC + NGC2AC)</b></a>
+                </li>
+
                  <li>
-                    <a href="#">Installation</a>
+                    <a href="#installation"><b>Installation</b></a>
                 </li>
                 <li>
-                    <a href="#">Getting Started</a>
+                    <a href="#started"><b>Getting Started</b></a>
                 </li>
                 <li>
-                    <a href="#">Evaluation</a>
+                    <a href="#evaluation"><b>Evaluation</b></a>
+
+                    <ul >
+                        <li>
+                            <a href="#evaluation">
+                                <strong>Case Studies (Artifacts)</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#statistics">
+                                <strong>Results</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#statechartsoclconstraints"> <strong>OCL Constraints (Statecharts)</strong> </a>
+                        </li>
+                        <li>
+                            <a href="#umloclconstraints">
+                                <strong>OCL Constraints (UML)</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#petrinetoclconstraints">
+                                <strong>OCL Constraints(Petrinet)</strong>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#editrules">
+                                <strong>Edit Rules</strong>
+                            </a>
+                        </li>
+
+
+                    </ul>
                 </li>
                 <li>
                     <a href="#">Publication</a>
                 </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+                <!--    <li>
+                       <a href="#">About</a>
+                   </li>
+                   <li>
+                       <a href="#">Contact</a>
+                   </li>-->
+               </ul>
+           </div>
+           <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -91,16 +138,162 @@
                          <br>
                          <br>
                      </div>
-                      <!--       <div class="row" >
-                                <br>
-                                <br>
-                            </div>
 
-                            <div class="row" style="background-color: transparent; border: double "  >
-                                <div class="col col-md-10" style="border: double">
-                                    <\div>
+                      <br>
+                      <br>
+
+                      <div class="row">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-6" id="description">
+                              <div class="card card-body" align="center">
+
+                                  <h3 class="card-title"> <br><b>OCL2AC Tool</b><hr></h3>
+                                  <!--   <ul class="list-group">
+                                        <li class="list-group-item"><b> OCL2AC</b> is a tool based on the Eclipse Modeling Framework (EMF) and consists of two main components:</li>
+                                        <li class="list-group-item"> <b>(1) OCL2NGC</b>  translates OCL constraints into nested graph constraints. </li>
+                                        <li class="list-group-item"> <b>(2) OCL2NGC</b>  integrates nested graph constraints as application conditions into transformation rules. </li>
+                                        <li class="list-group-item">Each component can be used independently as an Eclipse-based tool.</li>
+                                    </ul>-->
+                                    <div align="center" style="text-align:justify">
+                                        <span>&nbsp;&nbsp;</span> <b> OCL2AC</b> is a tool based on the Eclipse Modeling Framework (EMF) and consists of two main components:<br>
+                                        <span>&nbsp; &nbsp;</span>  <b>(1) OCL2NGC</b>  translates OCL constraints into nested graph constraints.<br>
+                                        <span>&nbsp; &nbsp;</span>  <b>(2) OCL2NGC</b>  integrates nested graph constraints as application conditions into transformation rules.<br>
+                                        <span>&nbsp; &nbsp;</span>  Each component can be used independently as an Eclipse-based tool.
+                                    </div>
+                                    <br>
+                                  <ul class="list-group">
+                                    <li class="list-group-item" id="ocl2ngc">  <img src="img/ocl2ngc.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <div align="center" ><i>Fig. <b>OCL2NGC Translator</b></i></div>
+                                        <br>
+                                      <li class="list-group-item" id="ngc2ac">  <img src="img/ngc2ac.png" class="rounded img-fluid" alt="">
+                                      <br>
+                                      <div align="center" ><i> Fig. <b>NGC2AC Integrator</b></i></div>
+                                      <br>
+                                  </ul>
+                              </div>
                             </div>
-                            </div>-->
+                            <div class="col-md-3">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="card card-body">
+                                    <h4 class="card-title" style="background-color: black; border: medium" align="center" ><br><p style="color: #ffe8a1"><b>OCL2AC &nbsp; News</b> &nbsp; <span class="glyphicon glyphicon-refresh" style="color: #ffe8a1"> </span></p> &nbsp;   <br></h4>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">  <span class="glyphicon glyphicon-asterisk">&nbsp; <b> <h3>The website is under construction: In few hours, we will finish it</h3></b> </span>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <div class="card card-body" id="installation" >
+                                  <h4 class="card-title" style="border: medium" align="center"><br><b>Installation</b></h4>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">1. Install the Eclipse Modeling Tool, e.g., Eclipse Neon: <a href="https://www.eclipse.org/downloads/packages/release/Neon/3">https://www.eclipse.org/downloads/packages/release/Neon/3 </a></li>
+                                        <li class="list-group-item">2. Install OCL in Eclipse: You can use the update manager in Eclipse to install OCL: E.g., in Eclipse Neon you use the link http://download.eclipse.org/releases/neon/ to install new plugins such as OCL SDK. </li>
+                                        <li class="list-group-item">3. Install Henshin: You can use the following update site to install Henshin using the update manager in Eclipse: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/release">http://download.eclipse.org/modeling/emft/henshin/updates/release </a> </li>
+                                        <li class="list-group-item">4. Install OCL2AC: You can use the following update site to install our tool using the update manager in Eclipse:  <a href=""></a></li>
+                                    </ul>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                        </div>
+
+                        <br>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6" id="started">
+                                <div class="card card-body">
+                                    <h4 class="card-title" style="border: medium" align="center"><br><b>Getting Strated</b> <hr></h4>
+                                    under construction ...
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+
+                        <br>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6" id="evaluation">
+                                <div class="card card-body">
+                                    <div class="card card-body">
+                                        <h4 class="card-title" style="border: medium" align="center"><br><b>Evaluation</b> </h4>
+                                         <ul class="list-group">
+                                            <li class="list-group-item"> <b>Case studay I</b>: Statecharts meta-model: <a href="">fase18.ocl2ac.test.statecharts</a> (Eclipse project)</li>
+                                            <li class="list-group-item"> <b>Case studay II</b>: UML meta-model: <a href="">fase18.ocl2ac.test.org.eclipse.uml</a> (Eclipse project)</li>
+                                            <li class="list-group-item"> <b>Case study III</b>: Petrinet meta-model: <a href="">fase18.ocl2ac.test.petrinet</a> (Eclipse project)</li>
+                                            <li class="list-group-item" id="statistics">  <img src="img/comparison_ocl_ngc.png" class="rounded img-fluid" alt="Comparision of complexity of OCL and NGC for selected constraints">
+                                            <br>
+                                            <div align="center" ><i> Fig. Comparision of complexity of OCL and NGC for selected constraints</i></div>
+                                            <br>
+                                            <p>Summarizing, both components of OCL2AC work fast. The translation of OCL to graph constraints is promising to increase the comprehensibility of con-
+                                        straints, though a slight overhead in size is produced. Application conditions resulting from the integration process tend to be more complex then the original
+                                        graph constraints. In most cases they are still easily understandable, but there are cases where the result becomes too complex to be understood anymore.</p>
+                                            </li>
+
+                                             <li class="list-group-item" id="editrules" >  <img src="img/editrules.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+                                             <li class="list-group-item">  <img src="img/table5time.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+                                             <li class="list-group-item">  <img src="img/table6.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+
+                                             <li class="list-group-item" id="statechartsoclconstraints">  <img src="img/statechartsoclconstraints.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+                                             <li class="list-group-item" id="umloclconstraints">  <img src="img/umloclconstraints.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+                                             <li class="list-group-item">  <img src="img/umloclconstraints2.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+                                             <li class="list-group-item">  <img src="img/umloclconstraints3.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+                                             <li class="list-group-item" id="petrinetoclconstraints">  <img src="img/petrinetoclconstraints.png" class="rounded img-fluid" alt="">
+                                                 <br>
+                                                 <br>
+                                                 <br>
+                                </ul>
+
+                            </div>
+                            </div>
+                             <div class="col-md-3"></div>
+                        </div>
+
+
+
+                        <!--       <div class="row" >
+                                  <br>
+                                  <br>
+                              </div>
+
+                              <div class="row" style="background-color: transparent; border: double "  >
+                                  <div class="col col-md-10" style="border: double">
+                                      <\div>
+                              </div>
+                              </div>-->
                         </section>
         </div>
 
