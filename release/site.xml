@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/org.eclipse.emf.ocl2ac.feature_1.0.0.201710231537.jar" id="org.eclipse.emf.ocl2ac.feature" version="1.0.0.201710231537">
-      <category name="ocl2ac_category_1"/>
-   </feature>
-   <category-def name="ocl2ac_category_1" label="OCL2AC"/>
-</site>
