@@ -191,24 +191,24 @@
                              <div class="card card-body">
                                  <h4 class="card-title" style="border: medium" align="center"><br><b>Getting Started</b> <hr></h4>
                                  <ul class="list-group">
-                                     <li class="list-group-item"> <h2><span class="glyphicon glyphicon-random">&nbsp; OCL2NGC</span></h2> <br> To Use <b>OCL2NGC</b>, two files are needed as inputs: an ecore file (.ecore) and an OCL file (.ecore.oclas):
+                                     <li class="list-group-item"> <h2><span class="glyphicon glyphicon-random">&nbsp; OCL2NGC</span></h2> <br> To use <b>OCL2NGC</b>, two files are needed as inputs: an ecore file (.ecore) and an OCL file (.ecore.oclas):
                                          <br>
                                          <br>
                                          <ul class="list-group">
-                                             <li class="list-group-item"> (1) To get the OCL file (.ecore.oclas): Open the meat-model file (e.g., petrinet.ecore) using Open with->OCLinEcore Editor. Then, right mouse-click on the opened OCLinEcore and choose OCL->Save->Save Abstract Syntax.
+                                             <li class="list-group-item"> (1) To get the OCL file (.ecore.oclas): Open the meta-model file (e.g., petrinet.ecore) using Open with->OCLinEcore Editor. Then, right mouse-click on the opened OCLinEcore and choose OCL->Save->Save Abstract Syntax.
                                              <li class="list-group-item"> (2) Select both files (.ecore) and (ecore.oclas), right mouse-click on them. Then choose OCL2AC-> Translate OCL Constraints to Nested Graph Constraints.
                                              <li class="list-group-item">  The output is a model file (.nestedconstraintmodel) which contains all the nested graph constraints being translated from OCL constraints.
                                          </ul>
-                                         Note: Make sure that your domain (meta-model) is already registered in the Eclipse (i.e, the EMF model artifacts of your domain is generated and deployed in the Eclipse) before using the tool services.
+                                         Note: Make sure that your domain (meta-model) is already registered in the Eclipse (i.e, the EMF model artifacts of your domain are generated and deployed in the Eclipse) before using the tool services.
                                          <br>
                                          <br>
                                          <img src="img/ecoreandocl.png" class="rounded img-fluid" alt="">
                                           <hr style="border: double">
-                                     <li class="list-group-item">  <h2><span class="glyphicon glyphicon-log-in">&nbsp; NGC2AC</span></h2> <br> To Use <b>NGC2AC</b>, two files are needed as inputs: a Henshin file (.henshin) and an nestedconstraintmodel file (.nestedconstraintmodel):
+                                     <li class="list-group-item">  <h2><span class="glyphicon glyphicon-log-in">&nbsp; NGC2AC</span></h2> <br> To use <b>NGC2AC</b>, two files are needed as inputs: a Henshin file (.henshin) and an nestedconstraintmodel file (.nestedconstraintmodel):
                                          <br>
                                          <br>
                                          <ul class="list-group">
-                                             <li class="list-group-item"> (1) Select both files (.henshin) and (.nestedconstraintmodel), right mouse-click on them. Then choose OCL2AC->Integrate Nested Graph Constraints in Rules as Application Condition. At this end, you get the integrator wizard.
+                                             <li class="list-group-item"> (1) Select both files (.henshin) and (.nestedconstraintmodel), right mouse-click on them. Then choose OCL2AC->Integrate Nested Graph Constraint in Rules as Application Condition. This opens the integrator wizard.  The integrator wizard displays the constraints from the selected nestedconstraintmodel file and the rules from the selected Henshin file. Select one constraint and one rule.
                                              <li class="list-group-item">  The output is a new Henshin rule being contained in the Henshin file (.henshin).
                                          </ul>
                                      <br>
