@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111170203-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111170203-2');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Automatic Translation of OCL Constraints to Graph Constraints and Application Conditions for Transformation Rules">
+    <meta name="keywords" content="Nebras, Nassar, OCL, Constraints, OCL2AC, Graph, Graph Constraints, Application Conditions, Henshin, Rule, Transformation">
+    <meta name="author" content="Nebras Nassar">
+    <meta name="author" content="Nassarn">
+    <meta name="author" content="Nassar">
+
+    <title>OCL2AC Tool</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        function codeAddress() {
+            $("#wrapper").toggleClass("toggled");
+        }
+
+        window.onload = codeAddress;
+    </script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" style="width: fit-content">
+        <ul class="sidebar-nav">
+
+            <li class="sidebar-brand">
+                <div align="center">
+                    <a href=""><strong>OCL2AC Tool</strong></a>
+                </div>
+            </li>
+
+            <br>
+            <li>
+                <a href="#">  <img src="img/ocl2acicon.png" class="rounded img-fluid" alt="" width="175"> </a>
+            </li>
+
+            <br>
+            <br>
+            <li>
+                <a href="#description"><b>OCL2AC (OCL2NGC + NGC2AC)</b></a>
+            </li>
+
+            <li>
+                <a href="#installation"><b>Installation</b></a>
+            </li>
+            <li>
+                <a href="#started"><b>Getting Started</b></a>
+            </li>
+            <li>
+                <a href="#evaluation"><b>Evaluation</b></a>
+
+                <ul>
+                    <li>
+                        <a href="#evaluation">
+                            <strong>Experiments</strong>
+                        </a>
+                        <ul>
+
+                            <li>
+                                <a href="#expTranslate">
+                                    <strong>Translation</strong>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#expIntegrate">
+                                    <strong>Integration</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#expPerformance">
+                                    <strong>Performance</strong>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#expRestrictiveness">
+                                    <strong>Restrictiveness</strong>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#expACPerformance">
+                                    <strong>AC Performance</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#inputsEval">
+                            <strong>Inputs for the Experiments</strong>
+                        </a>
+
+                        <ul>
+                            <li>
+                                <a href="#editrules">
+                                    <strong>Edit Rules</strong>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#statechartsoclconstraints"> <strong>OCL of Statecharts</strong> </a>
+                            </li>
+                            <li>
+                                <a href="#umloclconstraints">
+                                    <strong>OCL of UML</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#petrinetoclconstraints">
+                                    <strong>OCL of Petrinet</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#artifacts">
+                            <strong>All Artifacts (download)</strong>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+                <a href="#relvMM">
+                    <strong>Relevant Meta-Models</strong>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="#oclMM">
+                            <strong>Essential OCL</strong>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#gcMM">
+                            <strong>Graph Constraints</strong>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="#contact"><strong>Contact Us</strong></a>
+            </li>
+
+            <li>
+                <a href="#">Publication</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="card card-body" style="text-align: center">
+                        <ul class="list-group">
+                            <li class="list-group-item"><h2><b>OCL2AC</b><br> Automatic Translation of OCL Constraints
+                                to Graph
+                                Constraints and Application Conditions for
+                                Transformation Rules</h2>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <!-- /#page-content-wrapper -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="row" style="background-color: #062c33">
+                    <!--<br>-->
+                    <h1  align="center" style="color: #ffc107"><b> Under Construction (almost finished ... Coming soon ...) </b></h1>
+                    <!--<br>-->
+                </div>
+
+                <br>
+                <br>
+
+                <div class="row">
+
+
+                    <div class="col-md-1"></div>
+
+                    <!--content-->
+                    <div class="col-md-10" id="description">
+                        <div class="card card-body" align="center">
+                            <h3 class="card-title"><br><b>OCL2AC Tool</b>
+                                <hr>
+                            </h3>
+                            <div align="center" style="text-align:justify">
+                                <span>&nbsp;&nbsp;</span> <b> OCL2AC</b> is a tool based on the Eclipse Modeling
+                                Framework (EMF) and consists of two main components:<br>
+                                <br>
+                                <span>&nbsp; &nbsp;</span> <b>(1) OCL2NGC</b> translates OCL constraints into a set of semantically equivalent (nested)
+                                graph constraints.<br>
+                                <span>&nbsp; &nbsp;</span> <b>(2) NGC2AC</b> integrates graph constraints as
+                                application conditions into transformation rules.<br>
+                                <br>
+                                <span>&nbsp; &nbsp;</span> Each component can be used independently as an Eclipse-based
+                                tool.
+                            </div>
+                            <br>
+                            <ul class="list-group">
+                                <li class="list-group-item" id="ocl2ngc"><img src="img/toolings/ocl2ngcDiagram.png"
+                                                                              class="rounded img-fluid" alt="">
+                                    <br>
+                                    <div align="center"><i>Fig. <b>OCL2NGC Translator</b></i></div>
+                                    <br>
+                                <li class="list-group-item" id="ngc2ac"><img src="img/toolings/ngc2acDiagram.png"
+                                                                             class="rounded img-fluid" alt="">
+                                    <br>
+                                    <div align="center"><i> Fig. <b>NGC2AC Integrator</b></i></div>
+                                    <br>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div class="card card-body" id="installation">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>Installation</b></h4>
+                            <ul class="list-group">
+                                <li class="list-group-item">1. Install the Eclipse Modeling Tool, e.g., Eclipse Neon: <a
+                                        href="https://www.eclipse.org/downloads/packages/release/Neon/3">https://www.eclipse.org/downloads/packages/release/Neon/3 </a>
+                                </li>
+                                <li class="list-group-item">2. Install OCL in Eclipse: You can use the update manager in
+                                    Eclipse to install OCL: E.g., in Eclipse Neon you use the link
+                                    http://download.eclipse.org/releases/neon/ to install new plugins such as OCL SDK.
+                                </li>
+                                <li class="list-group-item">3. Install Henshin: You can use the following update site to
+                                    install Henshin using the update manager in Eclipse: <a
+                                            href="http://download.eclipse.org/modeling/emft/henshin/updates/release">http://download.eclipse.org/modeling/emft/henshin/updates/release </a>
+                                </li>
+                                <li class="list-group-item">4. Install OCL2AC: You can use the following update site to
+                                    install our tool using the update manager in Eclipse: <a
+                                            href="https://ocl2ac.github.io/home/release">https://ocl2ac.github.io/home/release</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!--Getting Started-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="started">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>Getting Started</b>
+                                <hr>
+                            </h4>
+                            <ul class="list-group">
+                                <li class="list-group-item"><h2><span
+                                        class="glyphicon glyphicon-random">&nbsp; OCL2NGC</span></h2> <br> To use <b>OCL2NGC</b>,
+                                    two files are needed as inputs: an ecore file (.ecore) and an OCL file
+                                    (.ecore.oclas):
+                                    <br>
+                                    <br>
+                                    <ul class="list-group">
+                                        <li class="list-group-item"> (1) To get the OCL file (.ecore.oclas): Open the
+                                            meta-model file (e.g., petrinet.ecore) using Open with->OCLinEcore Editor.
+                                            Then, right mouse-click on the opened OCLinEcore and choose OCL->Save->Save
+                                            Abstract Syntax.
+                                        <li class="list-group-item"> (2) Select both files (.ecore) and (ecore.oclas),
+                                            right mouse-click on them. Then choose OCL2AC-> Translate OCL Constraints to
+                                            Nested Graph Constraints.
+                                        <li class="list-group-item"> The output is a model file (.nestedconstraintmodel)
+                                            which contains all the nested graph constraints being translated from OCL
+                                            constraints.
+                                    </ul>
+                                    Note: Make sure that your domain (meta-model) is already registered in the Eclipse
+                                    (i.e, the EMF model artifacts of your domain are generated and deployed in the
+                                    Eclipse) before using the tool services.
+                                    <br>
+                                    <br>
+                                    <img src="img/toolings/ecoreandocl.png" class="rounded img-fluid" alt="">
+                                    <hr style="border: double">
+                                <li class="list-group-item"><h2><span
+                                        class="glyphicon glyphicon-log-in">&nbsp; NGC2AC</span></h2> <br> To use <b>NGC2AC</b>,
+                                    two files are needed as inputs: a Henshin file (.henshin), and a
+                                    nestedconstraintmodel file (.nestedconstraintmodel) or a compactconditionmodel file (.compactconditionmodel):
+                                    <br>
+                                    <br>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            (1) Select two files: the henshin file (.henshin) and the graph constraint file (.nestedconstraintmodel or .compactconditionmodel) and right mouse-click on them.
+                                            (2) Choose OCL2AC->Integrate Nested Graph Constraints as Application Conditions into Rules if the file (.nestedconstraintmodel) is selected or
+                                            OCL2AC->Integrate Compact Conditions as Application Conditions into Rules if the file (.compactconditionmodel) is selected. This opens the integrator wizard. The integrator wizard displays the
+                                            graph constraints from the selected graph constraint file and the rules from
+                                            the selected Henshin file.
+                                            (3) Select one constraint and one rule from the wizard and press integrate.
+                                        <li class="list-group-item"> The output is a new Henshin rule being contained in
+                                            the Henshin file (.henshin).
+                                    </ul>
+                                    <br>
+
+                                    <img src="img/toolings/constraintAndrule.png" class="rounded img-fluid" alt="">
+                                    <br>
+                                    <hr>
+                                    <img src="img/wizardv2.png" class="rounded img-fluid" alt="">
+                                    <hr style="border: double">
+                                <li class="list-group-item"><h2><span class="glyphicon glyphicon-modal-window">&nbsp; Graphical Formal View </span>
+                                </h2> <br>
+                                    <br>
+                                    <ul class="list-group"> To generate and view the latex file which represents the
+                                        graphical formal representation of a selected nested graph constraint or the
+                                        left application condition of a selected Henshin rule: <br>
+                                        <li class="list-group-item"> For showing a nested graph constraint: Open the
+                                            file (.nestedconstraintmodel) using the tree-based editor in Eclipse. Select
+                                            a concrete constraint (the container node of it), right-mouse click on it to
+                                            choose OCL2AC_NestedGraphConstraints.
+                                        <li class="list-group-item"> For showing the application condition of a Henshin
+                                            Rule: Open the Hesnhin file using the tree-based editor. Select a rule and
+                                            right-mouse click on it to choose OCL2AC_Henshin.
+                                    </ul>
+                                    Note: Make sure that the Latex framework is already installed in your operation
+                                    system and the latex path is registered in the environment variables. The time slot
+                                    for rendering a latex file to pdf is set to 5 seconds for now.
+                                    <br>
+                                    <img src="img/toolings/pdfviewer.png" class="rounded img-fluid" alt="">
+                                    <hr style="border: double">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!--Evaluation-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="evaluation">
+                        <div class="card card-body">
+                            <div class="card card-body">
+
+
+                                <h1  align="center"><br><b>Evaluation</b></h1>
+
+                                <ul class="list-group">
+
+                                    <!--              <li class="list-group-item"> <b>Case studay I</b>: Statecharts meta-model: <a href="projects/fase18.ocl2ac.test.statecharts.zip">fase18.ocl2ac.test.statecharts.zip</a> (Eclipse project)</li>
+                                                  <li class="list-group-item"> <b>Case studay II</b>: UML meta-model: <a href="projects/fase18.ocl2ac.test.umlrevised.zip">fase18.ocl2ac.test.org.eclipse.uml.zip</a> (Eclipse project)</li>
+                                                  <li class="list-group-item"> <b>Case study III</b>: Petrinet meta-model: <a href="projects/fase18.ocl2ac.test.petrinet.zip">fase18.ocl2ac.test.petrinet.zip</a> (Eclipse project)</li>
+                                                  <li class="list-group-item" id="statistics">  <img src="img/comparison_ocl_ngc.png" class="rounded img-fluid" alt="Comparision of complexity of OCL and NGC for selected constraints">
+                                                  <br>
+                                                  <div align="center" ><i> Fig. Comparision of complexity of OCL and NGC for selected constraints</i></div>
+                                                  <br>
+                                                  <p>Summarizing, both components of OCL2AC work fast. The translation of OCL to graph constraints is promising to increase the comprehensibility of con-
+                                              straints, though a slight overhead in size is produced. Application conditions resulting from the integration process tend to be more complex then the original
+                                              graph constraints. In most cases they are still easily understandable, but there are cases where the result becomes too complex to be understood anymore.</p>
+                                                  </li>-->
+
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <!--Experiment-->
+                                    <li class="list-group-item"><img src="img/exp/expSummary.png" class="rounded img-fluid"
+                                                                     alt="">
+
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <!--Translation-->
+                                    <li class="list-group-item" id="expTranslate"><img src="img/exp/expTranslation1.png" class="rounded img-fluid"
+                                                                                       alt="">
+                                    <li class="list-group-item"><img src="img/exp/expTranslation2.png" class="rounded img-fluid"
+                                                                     alt="">
+
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <!--Integration-->
+                                    <li class="list-group-item" id="expIntegrate"><img src="img/exp/expIntegration1.png" class="rounded img-fluid"
+                                                                                       alt="">
+                                    <li class="list-group-item"><img src="img/exp/expIntegration2.png" class="rounded img-fluid"
+                                                                     alt="">
+
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <!--Performance-->
+                                    <li class="list-group-item" id="expPerformance"><img src="img/exp/expPerformance1.png" class="rounded img-fluid"
+                                                                                         alt="">
+                                    <li class="list-group-item"><img src="img/exp/expPerformance2.png" class="rounded img-fluid"
+                                                                     alt="">
+
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <!--Restrictivness-->
+                                    <li class="list-group-item" id="expRestrictiveness"><img src="img/exp/expRestrictivness.png" class="rounded img-fluid"
+                                                                                             alt="">
+
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                        <!--AC Performance-->
+                                    <li class="list-group-item" id="expACPerformance"><img src="img/exp/expACPerformance1.png" class="rounded img-fluid"
+                                                                                           alt="">
+                                    <li class="list-group-item"><img src="img/exp/expACPerformance2.png" class="rounded img-fluid"
+                                                                     alt="">
+
+                                        <br>
+                                        <br>
+                                        <br>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <!--Inputs for the Evaluation-->
+
+                <div class="row" id="inputsEval">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" >
+                        <div class="card card-body">
+                            <div class="card card-body">
+                                <h1  align="center"><br><b>Inputs for the Evaluation</b></h1>
+                                <ul class="list-group">
+                                        <!-- Inputs for the Evaluations -->
+                                        <!--edit rules-->
+                                    <li class="list-group-item" id="editrules"><img src="img/inputs/expNumberedRules.png" class="rounded img-fluid" alt="">  </li>
+
+                                    <!--edit rules pics-->
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-10"><img
+                                                    src="img/inputs/rules/ADDConnectionPointReference.png"
+                                                    class="rounded img-fluid" alt=""></div>
+                                            <div class="col-md-10"><img src="img/inputs/rules/ADDStateMachine.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-10"><img src="img/inputs/rules/CREATEBehavior.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                            <div class="col-md-10"><img src="img/inputs/rules/CREATEFinalState.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-10"><img src="img/inputs/rules/CREATERegion.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                            <div class="col-md-10"><img src="img/inputs/rules/DELETEFinalState.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-10"><img src="img/inputs/rules/DELETEPseudostate.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                            <div class="col-md-10"><img src="img/inputs/rules/DELETETransition.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-10"><img src="img/inputs/rules/MOVEDOWNState.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                            <div class="col-md-10"><img src="img/inputs/rules/MOVERegionFROM.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-10"><img src="img/inputs/rules/MOVEUPRegion.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                            <div class="col-md-10"><img
+                                                    src="img/inputs/rules/REMOVEConnectionPointReference.png"
+                                                    class="rounded img-fluid" alt=""></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-md-10"><img src="img/inputs/rules/REMOVEStateMachine.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                            <div class="col-md-10"><img src="img/inputs/rules/SETREFERENCEState.png"
+                                                                        class="rounded img-fluid" alt=""></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <img src="img/inputs/rules/UNSETREFERENCEState.png" class="rounded img-fluid"
+                                                 alt="">
+                                        </div>
+                                    </li>
+                                    <br>
+
+                                    <li class="list-group-item" ><img src="img/inputs/expStatechartMM.png" class="rounded img-fluid" alt="">  </li>
+
+                                    <br>
+                                    <br>
+                                    <br>
+                                        <!--OCL for statechart-->
+                                    <li class="list-group-item" id="statechartsoclconstraints"><img
+                                            src="img/inputs/expOCLStatecharts.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <!--OCL for UML-->
+                                    <li class="list-group-item" id="umloclconstraints"><img
+                                            src="img/inputs/expOCLUML1.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                    <li class="list-group-item"><img src="img/inputs/expOCLUML2.png"
+                                                                     class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                    <li class="list-group-item"><img src="img/inputs/expOCLUML3.png"
+                                                                     class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <!--OCL for Petrinet-->
+                                    <li class="list-group-item" id="petrinetoclconstraints"><img
+                                            src="img/inputs/expOCLUML4andPetrinet.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                    <br>
+                                    <br>
+
+                                    <!-- All artifacts -->
+
+                                    <div class="card card-body">
+                                        <div class="card card-body">
+                                            <h4 class="card-title" style="border: medium" align="center" id="artifacts"><br><b>Artifacts</b></h4>
+                                            <ul class="list-group">
+
+                                    <li class="list-group-item"> <b> Test I</b>: Complexity and performance using the Statecharts: <a href="projects/ocl2ac.test.statecharts.zip">ocl2ac.test.statecharts.zip</a> (Eclipse project)</li>
+                                    <li class="list-group-item"> <b> Test II</b>: Performance and restrictiveness using the UML: <a href="projects/ocl2ac.test.umlrevised.zip">ocl2ac.test.org.eclipse.uml.zip</a> (Eclipse project)</li>
+                                    <li class="list-group-item"> <b> Test III</b>: Regarding the Petrinet: <a href="projects/ocl2ac.test.petrinet.zip">ocl2ac.test.petrinet.zip</a> (Eclipse project)</li>
+                                    <li class="list-group-item"> <b> Test IV</b>: Performance of Computed Application Conditions: <a href="projects/ocl2ac.eval.experiments.zip">ocl2ac.eval.experiments.zip</a> (Eclipse plugins project)</li>
+
+                                             <br>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!--Relevant Meta-Models-->
+
+                <div class="row" >
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-10" id="relvMM">
+                        <div class="card card-body">
+                            <div class="card card-body">
+                                <h1  align="center"><br><b>Relevant Meta-Models</b></h1>
+                                <ul class="list-group">
+
+                                    <li class="list-group-item"><img src="img/relvMM/expRelvMMs.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                    <li class="list-group-item" id="oclMM"><img src="img/relvMM/expOCLMM.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                    <li class="list-group-item" id="gcMM"><img src="img/relvMM/expNGCMM.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                    <li class="list-group-item"><img src="img/relvMM/expNGCM.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                    <li class="list-group-item"><img src="img/relvMM/expCGCMM.png" class="rounded img-fluid" alt="">
+                                        <br>
+                                        <br>
+                                        <br>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                </div>
+
+                <!--Contact US-->
+
+                <div class="row" >
+
+                    <div class="col-md-1"></div>
+
+                    <div class="col-md-10" >
+                        <div class="card card-body">
+                            <div class="card card-body">
+                                <h1  align="center"><br><b>Contact US</b></h1>
+
+                                <h4  align="center" id="contact"><br><b>
+                               <b>Nebras Nassar</b>  <br>
+                                Philipps-Universität Marburg <br>
+                                Fachbereich Mathematik und Informatik <br>
+                                Hans-Meerwein-Str. – Raum 05D18 <br>
+                                35032 Marburg <br>
+                                Email: nassarn AT informatik.uni-marburg.de <br>
+                                Web page:  <a href="https://www.uni-marburg.de/fb12/arbeitsgruppen/swt/nebras-nassar" target="_blank"> https://www.uni-marburg.de/fb12/arbeitsgruppen/swt/nebras-nassar </a>  <br>
+                                    <br>
+                                    <br>
+                                </b></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+
+                </div>
+
+            </section>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>
