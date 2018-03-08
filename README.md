@@ -1,5 +1,5 @@
-##OCL2AC
-
+# OCL2AC #
+---
 
 OCL2AC is a tool based on the Eclipse Modeling Framework (EMF) and consists of two main components:
 
@@ -11,10 +11,13 @@ Remarks:<br />
 - For more information about the tool OCL2AC and the work, please visit the web site of the tool:
 [https://ocl2ac.github.io/home/](https://ocl2ac.github.io/home/)
 
+<br />
+<br />
 
+# Contact US #
+---
 
-##Contact US
-If you have any question, idea or suggestions, please contact me:
+If you have any question, idea or suggestions, please feel free to contact me:
 
 **Nebras Nassar**  <br />
 Philipps-Universität Marburg <br/>
