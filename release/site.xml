@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.emf.ocl2ac.feature_1.0.0.201805231239.jar" id="org.eclipse.emf.ocl2ac.feature" version="1.0.0.201805231239">
+      <category name="ocl2ac_category_1"/>
+   </feature>
+   <category-def name="ocl2ac_category_1" label="OCL2AC">
+      <description>
+         OCL2AC: OCL2AC is a tool based on the Eclipse Modeling Framework (EMF) and can automatically update model transfomrations to guarantee a set of constraints. It consists of two main components:
+
+(1) OCL2GC: translates OCL constraints to graph constraints.
+(2) GC2AC: integrates graph constraints as application conditions for transformation rules.
+
+Each component can be used independently as an Eclipse-based tool. 
+
+Authors:
+Nebras Nassar et al.
+nassarn@mathematik.uni-marburg.de
+      </description>
+   </category-def>
+</site>
