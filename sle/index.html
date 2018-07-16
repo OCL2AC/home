@@ -52,8 +52,8 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
+    <div id="sidebar-wrapper" >
+        <ul class="sidebar-nav" style="width: auto">
 
 <!--            <li class="sidebar-brand">
                 <div align="center">
@@ -79,40 +79,38 @@
 
 
 
-            <li>
-                <a href="#evaluation"><b>Evaluation</b></a>
 
-                <ul>
+
                     <li>
                         <a href="#evaluation">
                             <strong>Experiments</strong>
                         </a>
                         <ul>
 
-                            <li>
-                                <a href="#expTranslate">
-                                    <strong>Translation</strong>
+                            <li style="color: #e0a800">
+                                <a href="#expTranslateWithoutOpt">
+                                    <strong>Translation without optimization</strong>
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="#expIntegrate">
-                                    <strong>Integration</strong>
+                            <li style="color: #e0a800">
+                                <a href="#expTranslateWithOpt">
+                                    <strong>Translation with optimization</strong>
                                 </a>
                             </li>
-                            <li>
+                            <li style="color: #e0a800">
                                 <a href="#expPerformance">
                                     <strong>Performance</strong>
                                 </a>
                             </li>
 
-                            <li>
+                            <li style="color: #e0a800">
                                 <a href="#expACPerformance">
-                                    <strong>AC Performance</strong>
+                                    <strong>Performance of A-priori and A-posteriori Checks</strong>
                                 </a>
                             </li>
 
-                            <li>
+                            <li style="color: #e0a800">
                                 <a href="#expRestrictiveness">
                                     <strong>Restrictiveness</strong>
                                 </a>
@@ -147,7 +145,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+
 
 
                     <li>
@@ -182,7 +180,7 @@
             </p>
 
 
-        </ul>
+
     </div>
     <!-- /#sidebar-wrapper -->
 
@@ -218,14 +216,11 @@
                 <br>
 
                 <div class="row">
-
-
                     <div class="col-md-1"></div>
-
                     <!--content-->
-                    <div class="col-md-10" id="description">
+                    <div class="col-md-10" id="expTranslateWithoutOpt">
                         <div class="card card-body" align="center">
-                            <h3 class="card-title"><br><b>Experiments</b>
+                            <h3 class="card-title"><br><b>Translation without Optimization</b>
                                 <hr>
                             </h3>
                             <br>
@@ -236,8 +231,57 @@
 
                 <br>
                 <br>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <!--content-->
+                    <div class="col-md-10" id="expTranslateWithOpt">
+                        <div class="card card-body" align="center">
+                            <h3 class="card-title"><br><b>Translation with Optimization</b>
+                                <hr>
+                            </h3>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
                 <br>
                 <br>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <!--content-->
+                    <div class="col-md-10" id="expPerformance">
+                        <div class="card card-body" align="center">
+                            <h3 class="card-title"><br><b>Performance</b>
+                                <hr>
+                            </h3>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <!--content-->
+                    <div class="col-md-10" id="expACPerformance">
+                        <div class="card card-body" align="center">
+                            <h3 class="card-title"><br><b>Performance of A-priori and A-posteriori Checks</b>
+                                <hr>
+                            </h3>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <br>
+                <br>
+
+
 
                 <!--Getting Started-->
                 <div class="row">
