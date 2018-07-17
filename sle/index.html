@@ -6,7 +6,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111170203-5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-111170203-5');
@@ -15,13 +19,15 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Automatic Translation of OCL Constraints to Graph Constraints and Application Conditions for Transformation Rules">
-    <meta name="keywords" content="Nebras, Nassar, OCL, Constraints, OCL2AC, Graph, Graph Constraints, Application Conditions, Henshin, Rule, Transformation">
+    <meta name="description"
+          content="Automatic Translation of OCL Constraints to Graph Constraints and Application Conditions for Transformation Rules">
+    <meta name="keywords"
+          content="Nebras, Nassar, OCL, Constraints, OCL2AC, Graph, Graph Constraints, Application Conditions, Henshin, Rule, Transformation">
     <meta name="author" content="Nebras Nassar">
     <meta name="author" content="Nassarn">
     <meta name="author" content="Nassar">
 
-    <title>SLE 2018</title>
+    <title>SLE18-Paper22</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -53,135 +59,149 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <div id="sidebar-wrapper" >
+    <div id="sidebar-wrapper">
         <ul class="sidebar-nav" style="width: auto">
-
-<!--            <li class="sidebar-brand">
-                <div align="center">
-                    <a href=""><strong>OCL2AC</strong></a>
-                </div>
-            </li>-->
-
-            <br>
-      <!--      <li>
-                <a href="#">  <img src="img/ocl2acicon.png" class="rounded img-fluid" alt="" width="175"> </a>
-            </li>-->
-
             <br>
             <br>
-            <li>
-                <a href="#description"><b>SLE 2018</b></a>
-            </li>
+            <br>
 
+            <!-- <li> <a href="#">  <img src="img/ocl2acicon.png" class="rounded img-fluid" alt="" width="175"> </a> </li>-->
 
             <li>
-                <a href="#version"><b>New version of OCL2AC</b></a>
+                <a href="#" style="color: white"><b>SLE18-Paper22</b></a>
+
             </li>
 
+            <br><br>
+            <br><br>
+            <br>
 
+            <li>
+                <a href="#proofs" style="color: greenyellow"><b>Correctness Proofs</b></a>
 
+            </li>
 
+            <li >
+                <a href="#expTranslateWithoutOpt" style="color: greenyellow ">
+                    <strong>Experiments' Results</strong>
+                </a>
 
-                    <li>
-                        <a href="#evaluation">
-                            <strong>Experiments</strong>
+                <ul>
+
+                    <li style="color: greenyellow">
+                        <a href="#expTranslateWithoutOpt" >
+                            <strong>Integration without optimization</strong>
                         </a>
-                        <ul>
-
-                            <li style="color: #e0a800">
-                                <a href="#expTranslateWithoutOpt">
-                                    <strong>Integration without optimization</strong>
-                                </a>
-                            </li>
-
-                            <li style="color: #e0a800">
-                                <a href="#expTranslateWithOpt">
-                                    <strong>Integration with optimization</strong>
-                                </a>
-                            </li>
-                            <li style="color: #e0a800">
-                                <a href="#expPerformance">
-                                    <strong>Run time for integration</strong>
-                                </a>
-                            </li>
-
-                            <li style="color: #e0a800">
-                                <a href="#expACPerformance">
-                                    <strong>Performance of a-priori and a-posteriori checks</strong>
-                                </a>
-                            </li>
-
-                            <li style="color: #e0a800">
-                                <a href="#expRestrictiveness">
-                                    <strong>Restrictiveness</strong>
-                                </a>
-                            </li>
-
-
-                        </ul>
                     </li>
-                    <li>
-                        <a href="#inputsEval">
-                            <strong>Inputs for the experiments</strong>
+
+                    <li style="color: greenyellow">
+                        <div>
+                        <a href="#expTranslateWithOpt" >
+                            <strong>Integration with optimization</strong>
                         </a>
+                        </div>
+                    </li>
+                    <li style="color: greenyellow">
+                        <a href="#expPerformance">
+                            <strong>Run time for integration</strong>
+                        </a>
+                    </li>
 
-                        <ul>
-                            <li>
-                                <a href="#editrules">
-                                    <strong>Edit rules</strong>
-                                </a>
-                            </li>
+                    <li style="color: greenyellow">
+                        <a href="#expACPerformance">
+                            <strong>Performance of a-priori and a-posteriori checks</strong>
+                        </a>
+                    </li>
 
-                            <li>
-                                <a href="#statechartsoclconstraints"> <strong>OCL of Statecharts</strong> </a>
-                            </li>
-                            <li>
-                                <a href="#umloclconstraints">
-                                    <strong>OCL of UML</strong>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#petrinetoclconstraints">
-                                    <strong>OCL of Petrinet</strong>
-                                </a>
-                            </li>
-                        </ul>
+                <!--    <li style="color: greenyellow">
+                        <a href="#expRestrictiveness">
+                            <strong>Restrictiveness</strong>
+                        </a>
+                    </li>-->
 
 
+                </ul>
+            </li>
 
-                    <li>
-                        <a href="#artifacts">
-                            <strong>All artifacts (download)</strong>
+            <li>
+                <a href="#statechartmm" style="color: greenyellow">
+                    <strong>Experiments' Inputs</strong>
+                </a>
+
+                <ul>
+
+                    <li style="color: greenyellow">
+                        <a href="#statechartmm" >
+                            <strong>Statechart Meta-model</strong>
+                        </a>
+                    </li>
+
+                    <li style="color: greenyellow">
+                        <a href="#statechartsoclconstraints" > <strong>OCL of Statecharts</strong> </a>
+                    </li>
+
+                    <li style="color: greenyellow">
+                        <a href="#editRules" >
+                            <strong>Edit rules</strong>
                         </a>
                     </li>
 
 
+                    <li style="color: greenyellow">
+                        <a href="#umloclconstraints" >
+                            <strong>OCL of UML</strong>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="#artifacts" style="color: greenyellow">
+                    <strong>Evaluation Artifacts</strong> </a>
+                    <ul>
+            <li style="color: #ffc107">
+                <a href="#artifacts"><b>Download all artifacts</b></a>
+            </li>
+
+        </ul>
+            </li>
+
+            <li>
+                <a href="#newocl2ac" style="color: greenyellow"><b>New Version of OCL2AC</b></a>
+                <ul>
+                    <li style="color: #ffc107">
+                        <a href="#newocl2ac"><b>Installation</b></a>
+                    </li>
+                </ul>
+            </li>
 
 
 
-                    <li>
+
+            <li>
                 <a href="#contact"><strong>Contact Us</strong></a>
             </li>
 
             <li>
                 <a href="#">Publication</a>
             </li>
+
             <br>
             <br>
             <br>
             <br>
+
             <li>
                 <a href="#"><strong>News</strong></a>
             </li>
             <p style="color: #ffc107">
-                <strong>
+
                     under construction ... coming soon
-                </strong>
+              
 
             </p>
-
-
-
+        </ul>
     </div>
     <!-- /#sidebar-wrapper -->
 
@@ -193,7 +213,8 @@
                 <div class="col-md-10">
                     <div class="card card-body" style="text-align: center">
                         <ul class="list-group">
-                            <li class="list-group-item"><h2> <b> Rendering Model Transformations Validity-Preserving</b></h2>
+                            <li class="list-group-item"><h2><b> Rendering Model Transformations Validity-Preserving</b>
+                            </h2>
                         </ul>
                     </div>
                 </div>
@@ -204,17 +225,34 @@
             <!-- Main content -->
             <section class="content">
 
-              <!-- Bar -->
-
-                <div class="row" style="background-color:violet ">
-                    <br>
-                    <h6  align="center" style="color: black"> <b style="font-size: large">  under construction ... coming soon </b></h6>
+                <!-- Bar -->
+                <div class="row" align="center" style="background-color:#ffc107 ">
+                    <h10 align="center" style="color: black"><b style="font-size: large"> under development ... coming
+                        soon </b></h10>
                     <br>
                 </div>
-
-
                 <br>
                 <br>
+
+                <!--Correctness Proofs-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <!--content-->
+                    <div class="col-md-10" id="proofs">
+                        <div class="card card-body" align="center">
+                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Correctness proofs</b>
+                                <hr>
+                            </h3>
+                          <p style="font-size: large"> We formally stated and proved the correctness of the claims we made in our paper Rendering Model Transformations Validity-Preserving.
+                              <a href="pdf/proofs.pdf" target="_blank">Please click here to download the proofs as PDF file.</a>
+                          </p>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
 
                 <!--Integration without Optimization-->
                 <div class="row">
@@ -222,13 +260,14 @@
                     <!--content-->
                     <div class="col-md-10" id="expTranslateWithoutOpt">
                         <div class="card card-body" align="center">
-                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Integration without Optimization</b>
+                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Integration without
+                                Optimization</b>
                                 <hr>
                             </h3>
                             <br>
 
                             <a href="img/exp/tableA1.png" target="new">
-                            <img src="img/exp/tableA1.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <img src="img/exp/tableA1.png" style='height: 100%; width: 100%; object-fit: contain'/>
                             </a>
 
                             <br>
@@ -249,7 +288,8 @@
                     <!--content-->
                     <div class="col-md-10" id="expTranslateWithOpt">
                         <div class="card card-body" align="center">
-                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Integration with Optimization</b>
+                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Integration with
+                                Optimization</b>
                                 <hr>
                             </h3>
                             <br>
@@ -270,13 +310,14 @@
                 <br>
                 <br>
 
-               <!--Run time of the integration-->
+                <!--Run time of the integration-->
                 <div class="row">
                     <div class="col-md-1"></div>
                     <!--content-->
                     <div class="col-md-10" id="expPerformance">
                         <div class="card card-body" align="center">
-                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Run time of the integration</b>
+                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Run time of the
+                                integration</b>
                                 <hr>
                             </h3>
                             <br>
@@ -291,22 +332,23 @@
                 <br>
                 <br>
 
-        <!--Performance of a-priori and a-posteriori checks-->
+                <!--Performance of a-priori and a-posteriori checks-->
                 <div class="row">
                     <div class="col-md-1"></div>
                     <!--content-->
                     <div class="col-md-10" id="expACPerformance">
                         <div class="card card-body" align="center">
-                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Performance of a-priori and a-posteriori checks</b>
+                            <h3 class="card-title" style="background-color: #b9bbbe"><br><b>Performance of a-priori and
+                                a-posteriori checks</b>
                                 <hr>
                             </h3>
                             <br>
 
                             <img src="img/exp/tableD1.png" style='height: 80%; width: 80%; object-fit: contain'/>
-                        <br>
-                        <br>
-                        <br>
-                        <img src="img/exp/tableD2.png" style='height: 80%; width: 80%; object-fit: contain'/>
+                            <br>
+                            <br>
+                            <br>
+                            <img src="img/exp/tableD2.png" style='height: 80%; width: 80%; object-fit: contain'/>
                         </div>
                     </div>
                     <div class="col-md-1"></div>
@@ -315,16 +357,16 @@
                 <br>
 
 
-
-                <!--Getting Started-->
+                <!--Statechart Meta-model-->
                 <div class="row">
                     <div class="col-md-1"></div>
-                    <div class="col-md-10" id="started">
+                    <div class="col-md-10" id="statechartmm">
                         <div class="card card-body">
-                            <h4 class="card-title" style="border: medium" align="center"><br><b>Inputs for the experiments</b>
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>Statechart Meta-model</b>
                                 <hr>
                             </h4>
 
+                            <img src="img/inputs/expStatechartMM.png" style='height: 100%; width: 100%; object-fit: contain'/>
                         </div>
                     </div>
                     <div class="col-md-1"></div>
@@ -335,37 +377,125 @@
                 <br>
                 <br>
 
-                <!--Evaluation-->
-                <!--Experiment-->
-                <!--Translation-->
-                <!--Integration-->
-                <!--Performance-->
-                <!--Restrictivness-->
-                <!--AC Performance-->
-                <!--Inputs for the Evaluation-->
-                <!-- All artifacts -->
-                <!--Relevant Meta-Models-->
+                <!--OCL Constraints of Statecharts-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="statechartsoclconstraints">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>OCL Constraints of Statecharts</b>
+                                <hr>
+                            </h4>
 
+                            <img src="img/inputs/tablestatechartsoclconstranits.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!--Edit Rules of Statecharts-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="editRules">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>Edit Rules of Statecharts</b>
+                                <hr>
+                            </h4>
+
+                            <img src="img/inputs/tableRules.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!--OCL Constraints of UML-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="umloclconstraints">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>OCL Constraints of UML</b>
+                                <hr>
+                            </h4>
+
+                            <img src="img/inputs/tableumloclconstranits1.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                            <img src="img/inputs/tableumloclconstranits2.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                            <img src="img/inputs/tableumloclconstranits3.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                            <img src="img/inputs/tableumloclconstranits4.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!--Evaluation artifacts-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="artifacts">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>Evaluation artifacts</b>
+                                <hr>
+                            </h4>
+                            <p style="font-size: large"> coming soon</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <!--New Version of OCL2AC-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="newocl2ac">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>New Version of OCL2AC</b>
+                                <hr>
+                            </h4>
+                            <p style="font-size: large"> Installation is coming soon</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
 
                 <!--Contact US-->
-
-                <div class="row" >
+                <div class="row">
 
                     <div class="col-md-1"></div>
 
-                    <div class="col-md-10" >
+                    <div class="col-md-10">
                         <div class="card card-body">
                             <div class="card card-body">
-                                <h1  align="center"><br><b>Contact US</b></h1>
+                                <h1 align="center"><br><b>Contact US</b></h1>
 
-                                <h4  align="center" id="contact"><br><b>
-                               <b>Nebras Nassar</b>  <br>
-                                Philipps-Universität Marburg <br>
-                                Fachbereich Mathematik und Informatik <br>
-                                Hans-Meerwein-Str. – Raum 05D18 <br>
-                                35032 Marburg <br>
-                                Email: nassarn AT informatik.uni-marburg.de <br>
-                                Web page:  <a href="https://www.uni-marburg.de/fb12/arbeitsgruppen/swt/nebras-nassar" target="_blank"> https://www.uni-marburg.de/fb12/arbeitsgruppen/swt/nebras-nassar </a>  <br>
+                                <h4 align="center" id="contact"><br><b>
+                                    <b>Nebras Nassar</b> <br>
+                                    Philipps-Universität Marburg <br>
+                                    Fachbereich Mathematik und Informatik <br>
+                                    Hans-Meerwein-Str. – Raum 05D18 <br>
+                                    35032 Marburg <br>
+                                    Email: nassarn AT informatik.uni-marburg.de <br>
+                                    Web page: <a href="https://www.uni-marburg.de/fb12/arbeitsgruppen/swt/nebras-nassar"
+                                                 target="_blank">
+                                    https://www.uni-marburg.de/fb12/arbeitsgruppen/swt/nebras-nassar </a> <br>
                                     <br>
                                     <br>
                                 </b></h4>
