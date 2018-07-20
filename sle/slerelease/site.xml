@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.emf.ocl2ac.feature_1.0.0.201807201611.jar" id="org.eclipse.emf.ocl2ac.feature" version="1.0.0.201807201611">
+      <category name="ocl2ac_category_1"/>
+   </feature>
+   <category-def name="ocl2ac_category_1" label="OCL2AC">
+      <description>
+         OCL2AC: OCL2AC is a tool based on the Eclipse Modeling Framework (EMF) and consists of two main components:
+
+(1) OCL2NGC: translates OCL constraints into nested graph constraints.
+(2) NGC2AC: integrates graph constraints as application conditions
+into transformation rules.
+
+Each component can be used independently as an Eclipse-based
+tool. 
+
+Authors:
+Nebras Nassar et al.
+nassarn@mathematik.uni-marburg.de
+      </description>
+   </category-def>
+</site>
