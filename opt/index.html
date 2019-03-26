@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111170203-5"></script>
@@ -81,7 +81,7 @@
    
 
             <li>
-                <a href="#newocl2ac" style="color: SkyBlue"><b>Optimizer Tool Support</b></a>
+                <a href="#newocl2ac" style="color: SkyBlue"><b>Optimizing Techniques</b></a>
                 <ul>
                     <li style="color: SkyBlue">
                         <a href="#newocl2ac"><b>Installation</b></a>
@@ -146,10 +146,82 @@
                 <br>
                 <br>
 
-  
+  <!--New Version of OCL2AC-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="newocl2ac">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>Optimizing-by-Construction Techniques</b>
+                                <hr>
+                            </h4>
+                            <p style="font-size: larger"> To install the optimizer being integrated into OCL2AC, please use the guidance described in the main webpage of our tool OCL2AC <a href="https://ocl2ac.github.io/home/#installation" target="_blank" style='height: 100%; width: 100%; object-fit: contain'>  (https://ocl2ac.github.io/home/#installation)</a> but be sure to use the following release URL instead of the one  mentioned in the gaudiness (item 4).
+                                <br>
+                                The URL of the new release is: <a href="https://ocl2ac.github.io/home/opt/optrelease" style="background-color: SkyBlue"  style='height: 100%; width: 100%; object-fit: contain' target="_blank">https://ocl2ac.github.io/home/opt/optrelease</a>
+                                <br>
+                                <br>
+
+                                We have implemented the following functionalities and integrated into the tool OCL2AC: <br>
+                                <b>(1)&nbsp;&nbsp; Optimizer:</b>   It constructs an optimized validity-preserving application condition from a given a constraint and a rule. Our optimizer checks if the constraint is required to be integrated into the rule and removes unnecessary checks from the resulting application condition during the construction process if the constraint is required.   
+                                <br>
+								The figures below show (a) the wizard for choosing a rule, a constraint and the functionalities for constructing optimized validity-preserving application conditions and (b) two message examples which could be resulted after applying our optimizer: One for showing that the constraint is not required to be integrated into the given rule and one for showing the list of constraints which are integrated into the given rule since they are needed. Using our optimizer, the user can automatically construct the optimized validity-preserving application condition from a list of constraints and a rule.  The wizard has the functionalities of OCL2AC to construct validity-guaranteeing application conditions (the buttons titled with integrate) as well.
+                                <br>
+                                <center>
+                            <img src="img\toolings\wizardAll.jpg" style='height: 100%; width: 100%; object-fit: contain'/>
+
+                        </center>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                                <b>(2)&nbsp;&nbsp; Equivalence rules:</b> A functionality which simplifies application conditions by applying equivalence rules (as described in Section 5). The figure below shows the corresponding functionally which should be invoked by the user (right click on a selected Henshin rule (opened by the tree-based editor) -> choose OCL2AC_Henshin -> Simplify Application Condition).
+                                <br>
+                                <br>
+
+                            <img src="img/toolings/simplifyACMenu.png" style='height: 100%; width: 100%; object-fit: contain'/>
+
+                            <br>
+                            <br>
+
+
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
                 <br>
                 <br>
                 <br>
+
+                <!--Evaluation artifacts-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="artifacts">
+                        <div class="card card-body">
+                            <h4 class="card-title" style="border: medium" align="center"><br><b>Evaluation artifacts</b>
+                                <hr>
+                            </h4>
+                            <p>&nbsp;&nbsp; Please, after installing our tool, download and import the following Eclipse-plugins which compose the artefacts used in our complexity and performance experiments:  
+
+							 <ul>
+							      <li> <a href=""><b>Complexity Experiments (Eclipse Plug-in)</b></a> </li>
+								  <li> <a href=""><b>Performance Experiments (Eclipse Plug-in)</b></a> </li>
+
+						    </ul>
+		
+							</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
 				
                 <!--Contact US-->
                 <div class="row">
@@ -159,7 +231,7 @@
                     <div class="col-md-10">
                         <div class="card card-body">
                             <div class="card card-body">
-                                <h1 align="center"><br><b>Contact US</b></h1>
+                                <h4 align="center"><br><b>Contact US</b></h4>
 
                                 <h4 align="center" id="contact"><br><b>
                                     <b>Nebras Nassar</b> <br>
