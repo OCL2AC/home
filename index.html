@@ -77,17 +77,14 @@
             </li>
             <li>
                 <a href="#started"><b>Getting Started</b></a>
-            </li>
+            </li>        
 
             <li>
-                <a href="#relvMM"><strong>Relevant Meta-models</strong></a>
+                <a href="#Publications"><strong>Publications</strong></a>
             </li>
-            <li>
+			
+			   <li>
                 <a href="#contact"><strong>Contact Us</strong></a>
-            </li>
-
-            <li>
-                <a href="#">Publication</a>
             </li>
             <br>
             <br>
@@ -97,8 +94,9 @@
                 <a href="#"><strong>News</strong></a>
             </li>
             <p style="color: #ffc107">
-                <strong>Last update was on 23.05.2018.
-                    </strong>
+			    <strong> - 12.07.2019: a new release including the optimizer. </strong>
+				 <br>
+                <strong> - 23.05.2018: a new update. </strong>
 
             </p>
 
@@ -130,7 +128,10 @@
                 <div class="row" style="background-color: #062c33">
                     <br>
                     <!--<h1  align="center" style="color: #ffc107"><b> Under Construction (almost finished ... Coming soon ...) </b></h1>-->
-                    <<h5  align="center" style="color: #ffc107"><!--<b> Last update was on 18.04.2018: Several parts are disabled for now </b>--></h5>
+                    <<h5  align="center" style="color: #ffc107">
+					News: a new release including the optimizer.
+					<!--<b> Last update was on 18.04.2018: Several parts are disabled for now </b>-->
+					</h5>
                     <br>
                 </div>
 
@@ -155,11 +156,13 @@
                                 <span>&nbsp; &nbsp;</span> <b>(1) OCL2GC</b> translates OCL constraints into a set of semantically equivalent (nested)
                                 graph constraints.<br>
                                 <span>&nbsp; &nbsp;</span> <b>(2) GC2AC</b> integrates graph constraints as
-                                application conditions into transformation rules.<br>
+                                (guaranteeing) application conditions into transformation rules.<br>
                                 <br>
+								<br>
                                 <span>&nbsp; &nbsp;</span> Each component can be used independently as an Eclipse-based
                                 tool.
                             </div>
+							
                             <br>
                             <ul class="list-group">
                                 <li class="list-group-item" id="ocl2ngc"><img src="img/toolings/ocl2ngcDiagram.png"
@@ -178,8 +181,33 @@
                     <div class="col-md-1"></div>
                 </div>
 
+			
+
                 <br>
                 <br>
+				
+				       <div class="row">
+
+
+                    <div class="col-md-1"></div>
+
+                    <!--content-->
+                    <div class="col-md-10" id="description">
+                        <div class="card card-body" align="center">
+                            <h3 class="card-title"><br><b>Optimizer (NEW)</b>
+                            </h3>
+                            <div align="center" style="text-align:justify">
+							The optimizer  is a new component added to the tool OCL2AC. It constructs an <b> optimized validity-preserving application condition </b> from a given a constraint and a rule. 
+							The optimizer checks if the constraint is required to be integrated into the rule, and simplifies the guaranteeing application condition by removing unnecessary checks during the construction process. For more information, please take a look at the paper <a href="#p19"> [2] </a> and its web <a href="opt/index.html">  page</a>.
+							
+                            </div>
+							
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+				
                 <br>
                 <br>
 
@@ -201,8 +229,11 @@
                                             href="http://download.eclipse.org/modeling/emft/henshin/updates/release">http://download.eclipse.org/modeling/emft/henshin/updates/release </a>
                                 </li>
                                 <li class="list-group-item">4. Install OCL2AC: You can use the following update site to
-                                    install our tool using the update manager in Eclipse: <a
-                                            href="https://ocl2ac.github.io/home/release">https://ocl2ac.github.io/home/release</a>
+                                    install our tool using the update manager in Eclipse:
+
+									<a href="https://ocl2ac.github.io/home/opt/optrelease">https://ocl2ac.github.io/home/opt/optrelease</a>
+											
+								
                                 </li>
                             </ul>
                         </div>
@@ -303,56 +334,33 @@
                 <br>
                 <br>
 
-                <!--Evaluation-->
-                <!--Experiment-->
-                <!--Translation-->
-                <!--Integration-->
-                <!--Performance-->
-                <!--Restrictivness-->
-                <!--AC Performance-->
-                <!--Inputs for the Evaluation-->
-                <!-- All artifacts -->
-                <!--Relevant Meta-Models-->
 
-                <div class="row" >
+<!--content-->
+ <div class="row" >
 
                     <div class="col-md-1"></div>
-
-                    <div class="col-md-10" id="relvMM">
-                        <div class="card card-body">
-                            <div class="card card-body">
-                                <h1  align="center"><br><b>Relevant Meta-Models</b></h1>
-                                <ul class="list-group">
-
-                                    <li class="list-group-item"><img src="img/relvMM/expRelvMMs.png" class="rounded img-fluid" alt="">
-                                        <br>
-                                        <br>
-                                        <br>
-                                    <li class="list-group-item" id="oclMM"><img src="img/relvMM/expOCLMM.png" class="rounded img-fluid" alt="">
-                                        <br>
-                                        <br>
-                                        <br>
-                                    <li class="list-group-item" id="gcMM"><img src="img/relvMM/expNGCMM.png" class="rounded img-fluid" alt="">
-                                        <br>
-                                        <br>
-                                        <br>
-                                    <li class="list-group-item"><img src="img/relvMM/expNGCM.png" class="rounded img-fluid" alt="">
-                                        <br>
-                                        <br>
-                                        <br>
-                                    <li class="list-group-item"><img src="img/relvMM/expCGCMM.png" class="rounded img-fluid" alt="">
-                                        <br>
-                                        <br>
-                                        <br>
-                                </ul>
-                            </div>
+                    <div class="col-md-10" id="Publications">
+                        <div class="card card-body" align="center">
+                            <h3 class="card-title"><br><b>Publications</b>
+                            </h3>
+                            <div align="center" style="text-align:justify">
+							
+							
+							 <b id="p18"> [1] Nebras Nassar, Jens Kosiol, Thorsten Arendt, Gabriele Taentzer: <strong> OCL2AC: Automatic Translation of OCL Constraints to Graph Constraints and Application Conditions for Transformation Rules </strong>: The 11th International Conference on Graph Transformation (ICGT 2018), Springer. <a href="doc/NKAT18.pdf"><b>[PDF[</b></a>
+							<br>
+							<b id="p19"> [2] Nebras Nassar, Jens Kosiol, Thorsten Arendt, Gabriele Taentzer: <strong> Constructing Optimized Validity-Preserving Application Conditions for Graph Transformation Rules </strong>. In: The International Conference on Graph Transformation (ICGT 2019), Springer. <a href="doc/NKAT19TR.pdf"><b>[PDF} (long version) </b></a>
+							
+						    </div>
+							
+                            <br>
                         </div>
                     </div>
-
                     <div class="col-md-1"></div>
-
                 </div>
-
+				
+                <br>
+                <br>
+				
                 <!--Contact US-->
 
                 <div class="row" >
